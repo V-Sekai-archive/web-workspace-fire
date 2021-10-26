@@ -16,7 +16,19 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "dependsOn": [
+                "Update repos.sh"
+            ]
+        },
+        {
+            "label": "Update repos.sh",
+            "type": "shell",
+            "command": "./update_repos.sh",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
         }
     ]
 }
